@@ -33,3 +33,6 @@ def signup(request):
 
 def checkout(request):
     return render(request, 'core/checkout.html')
+
+def confirmation(request):
+    return render(request, 'core/confirmation.html')

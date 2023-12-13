@@ -8,19 +8,19 @@
         <img src="{{ item.image.url }}"  alt="My Image" width="700" height="600" class="rounded-xl">
     </div>
 
-    <div class="col-span-2 p-6 bg-black rounded-xl">
-        <h1 class="mb-6 text-3xl text-yellow-200">{{ item.name }}</h1>
-        <p class="text-yellow-100"><strong>Price: </strong>${{ item.price }}0</p>
-        <p class="text-yellow-100"><strong>Seller: </strong>{{ item.created_by.username }}</p>
+    <div class="col-span-2 p-6 bg-neutral-950 rounded-xl">
+        <h1 class="mb-6 text-3xl text-yellow-200 text">{{ item.name }}</h1>
+        <p class="text-yellow-100 text-xl my-6"><strong>Price: </strong>${{ item.price }}0</p>
+        <p class="text-yellow-100 text-xl mb-6"><strong>Seller: </strong>{{ item.created_by.username }}</p>
 
         {% if item.description %}
-            <p class="text-yellow-200">
-                <strong class="text-yellow-200">Description:</strong><br>
+            <p class="text-amber-100 mt-20">
+                <strong class="text-amber-100">Description:</strong><br>
                 {{ item.description }}
             </p>
         {% endif %}
 
-        <a href="{% url 'core:checkout' %}" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-yellow-200 text-black rounded-xl hover:bg-yellow-400">Buy Now</a>
+        <a href="{% url 'core:checkout' %}" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-amber-200 text-black rounded-xl hover:bg-yellow-400">Buy Now</a>
     </div>
 </div>
 
