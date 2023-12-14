@@ -1,13 +1,13 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
-<h1 class="text-3xl text-yellow-100 py-6 font-bold">Checkout</h1>
-<div class="min-h-full">
+<h1 class="text-3xl text-yellow-100 py-6 font-bold flex justify-center">Checkout</h1>
+<div class="min-h-full ">
 <form method="post" action="{% url 'core:confirmation' %}">
     {% csrf_token %}
-    <div class="grid grid-cols-2 gap-3">
+    <div class="grid grid-cols-2 justify-items-center gap-y-3">
     
-        <label for="first_name" class = "text-yellow-100 text-lg">First Name:</label>
+        <label for="first_name" class = "text-yellow-100 text-lg text-left">First Name:</label>
         <input type="text" id="first_name" name="first_name" required class="form-control w-60 bg-amber-100" >
     
     
@@ -27,7 +27,7 @@
         <label for="credit_card" class = "text-yellow-100 text-lg">Credit Card Information:</label>
         <input type="text" id="credit_card" name="credit_card" required class="form-control w-60 bg-amber-100" placeholder="Card Number - Expiry Date - CVV" >
     <div></div>
-    <input type="submit"  class="btn btn-primary w-60 bg-amber-200" >Place Order</input> 
+    <input type="submit" value="Place Order" class="btn btn-primary w-60 bg-amber-200" ></input> 
 </div>
 </form>
 </div>
