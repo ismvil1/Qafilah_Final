@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import logout
 
 from item.models import Category, Item
 
@@ -36,3 +37,8 @@ def checkout(request):
 
 def confirmation(request):
     return render(request, 'core/confirmation.html')
+
+def signout(request):
+    if(request.method == "POST"):
+        logout(request)
+        return redirect("core/index.html")
